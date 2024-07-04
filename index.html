@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="title">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#dashboard">
+              <span class="icon">
+                <ion-icon name="stats-chart-outline"></ion-icon>
+              </span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="dataset.html">
+              <span class="icon">
+                <ion-icon name="server-outline"></ion-icon>
+              </span>
+              <span class="title">Dataset</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--main-->
+    <div class="main" id="dashboard">
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <h1>DASHBOARD DEFORESTASI DI INDONESIA</h1>
+      </div>
+
+      <!--iframe-->
+      <iframe
+        width="1440"
+        height="1700"
+        src="https://lookerstudio.google.com/embed/reporting/9bb26248-b2e7-4767-b68d-6869768db463/page/p_h35e8ydtid"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen
+        sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+      ></iframe>
+    </div>
+
+    <!--script-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!--connect js-->
+    <script src="script.js"></script>
+  </body>
 </html>
