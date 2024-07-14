@@ -70,6 +70,31 @@ body {
 .navigation ul li:hover a {
   color: var(--green);
 }
+.navigation ul li a .logo img {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: block;
+  line-height: 72px;
+  text-align: center;
+}
+.navigation ul li a .logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+.navigation ul li a .logo-text .title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2.4;
+}
+.navigation ul li a .logo-text .subtitle {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -26px;
+  margin-bottom: 8px;
+}
 .navigation ul li a .icon {
   position: relative;
   display: block;
@@ -86,8 +111,7 @@ body {
   display: block;
   padding: 0;
   height: 60px;
-  line-height: 60px;
-  text-align: start;
+  line-height: 56px;
   white-space: nowrap;
   font-size: 25px;
   font-weight: 550;
@@ -120,6 +144,7 @@ body {
 .topbar h1 {
   justify-content: space-between;
   margin-left: 30px;
+  font-size: 40px;
 }
 .toggle {
   position: relative;
@@ -133,13 +158,45 @@ body {
 }
 
 iframe {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 #dataset-content {
+  margin-top: 15px;
   margin-left: 20px;
 }
 
 #iframe-dataset {
   margin-bottom: 30px;
+}
+
+/* Responsive styles */
+@media (max-width: 780px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    width: 300px;
+    left: 0;
+  }
+
+  .main {
+    width: 100%;
+    left: 0;
+  }
+  .toggle {
+    width: 40px;
+    height: 10px;
+  }
+
+  .main h1 {
+    font-size: 30px;
+    justify-content: space-between;
+  }
+  main.active {
+    left: 0;
+  }
+  #grafik {
+    width: 100%;
+  }
 }
