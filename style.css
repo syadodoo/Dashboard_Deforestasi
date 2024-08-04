@@ -47,6 +47,7 @@ body {
 .navigation ul li {
   position: relative;
   width: 200%;
+  margin-bottom: 10px;
   list-style: none;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -67,6 +68,14 @@ body {
   text-decoration: none;
   color: var(--white);
 }
+.navigation ul li a.active {
+  color: var(--green);
+  background-color: var(--white);
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
 .navigation ul li:hover a {
   color: var(--green);
 }
@@ -131,7 +140,7 @@ body {
   left: 72px;
 }
 .main.active .topbar {
-  width: 100%; /* Adjust width for .topbar when .main is active */
+  width: 100%;
 }
 .topbar {
   height: 100px;
@@ -147,18 +156,18 @@ body {
   font-size: 40px;
 }
 .toggle {
+  display: none;
   position: relative;
   width: 60px;
   height: 60px;
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
   cursor: pointer;
 }
 
-iframe {
-  margin-top: 5px;
+#grafik {
+  width: 100%;
 }
 
 #dataset-content {
@@ -171,7 +180,17 @@ iframe {
 }
 
 /* Responsive styles */
-@media (max-width: 780px) {
+@media (max-width: 1100px) {
+  .toggle {
+    display: flex;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
   .navigation {
     left: -300px;
   }
@@ -184,10 +203,6 @@ iframe {
     width: 100%;
     left: 0;
   }
-  .toggle {
-    width: 40px;
-    height: 10px;
-  }
 
   .main h1 {
     font-size: 30px;
@@ -196,7 +211,15 @@ iframe {
   main.active {
     left: 0;
   }
+
+  #iframe-dataset {
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
   #grafik {
     width: 100%;
+    height: 720px;
   }
 }
